@@ -1,38 +1,112 @@
+/* Style général pour réinitialiser les marges, les espacements, et définir une police */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Utilisation de la police Arial */
+}
+
+/* Style principal de l'application */
 .App {
+  text-align: center;
+  margin-top: 2rem; /* Espace au-dessus de l'application */
+}
+
+/* Style du titre principal */
+h1 {
+  color: #4a4e69; /* Couleur du texte */
+  font-size: 2.5rem; /* Taille du texte */
+  margin-bottom: 1.5rem; /* Espace sous le titre */
+}
+
+/* Style du formulaire pour ajouter une pensée */
+.add-thought-form {
+  display: flex;
+  justify-content: center; /* Centre le formulaire horizontalement */
+  margin-bottom: 1.5rem; /* Espace sous le formulaire */
+}
+
+/* Style de l'input du formulaire */
+.add-thought-form input {
+  width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #a0a3a8; /* Bordure grise autour de l'input */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 1rem;
+  margin-right: 0.5rem; /* Espace entre l'input et le bouton */
+}
+
+/* Style du bouton du formulaire */
+.add-thought-form button {
+  padding: 0.5rem 1rem;
+  background-color: #9a8c98; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Change le curseur en main survol */
+  transition: background-color 0.3s; /* Effet de transition pour le changement de couleur */
+}
+
+/* Couleur de fond du bouton au survol */
+.add-thought-form button:hover {
+  background-color: #4a4e69;
+}
+
+/* Style du tableau contenant la liste des pensées */
+.thought-list {
+  width: 80%;
+  margin: 0 auto; /* Centre le tableau */
+  border-collapse: collapse; /* Supprime l'espace entre les bordures des cellules */
+}
+
+/* Style des en-têtes et cellules du tableau */
+.thought-list th,
+.thought-list td {
+  padding: 0.75rem;
+  border: 1px solid #ccc; /* Bordure autour de chaque cellule */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style de l'en-tête du tableau */
+.thought-list th {
+  background-color: #22223b; /* Couleur de fond de l'en-tête */
+  color: #f2e9e4; /* Couleur du texte de l'en-tête */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style des rangées des pensées */
+.thought-row {
+  background-color: #f2e9e4; /* Couleur de fond par défaut des rangées */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Style pour les rangées paires du tableau pour un effet de bande */
+.thought-row:nth-child(even) {
+  background-color: #c9ada7;
+}
+
+/* Style des boutons dans les rangées du tableau */
+.thought-row button {
+  padding: 0.3rem 0.7rem;
+  background-color: #4a4e69; /* Couleur de fond du bouton */
   color: white;
+  border: none;
+  border-radius: 3px; /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Effet de transition au survol */
 }
 
-.App-link {
-  color: #61dafb;
+/* Couleur de fond des boutons au survol */
+.thought-row button:hover {
+  background-color: #22223b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles pour les cellules et la mise en forme du chronomètre */
+.thought-row td {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Style de la cellule qui contient le temps restant */
+.thought-row td:nth-child(2) {
+  font-weight: bold;
+  color: #4a4e69; /* Couleur spécifique pour le texte du temps restant */
 }
